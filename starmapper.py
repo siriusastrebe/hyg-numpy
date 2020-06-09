@@ -11,7 +11,7 @@ r = list(reader)
 
 r.pop(0) # Remove label row
 
-stars = sorted(r, reverse=True, key=lambda x: x[column_names.index('ProperName')])
+stars = sorted(r, reverse=False, key=lambda x: float(x[column_names.index('Mag')]));
 
 
 table = prettytable.PrettyTable(column_names)
